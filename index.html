@@ -26,8 +26,17 @@ body {
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  height: 100%;
-  background-color: #333;
+  height: 10%;
+  background-color: rgb(85, 175, 202);
+}
+
+/*  Images that send you to article links */
+.leftcolumnImageLink {
+  width: 150px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 6px;
+  border-color: rgb(85, 175, 202);
 }
 
 /* Style the topnav links */
@@ -50,7 +59,7 @@ body {
 /* Left column */
 .leftcolumn {   
   float: left;
-  width: 25%;
+  width: 15%;
 }
 
 /* Right column */
@@ -133,7 +142,7 @@ input[type=submit]:hover {
 
 div {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #f2f2f2; /* 2nd to lower background */
   padding: 20px;
 }
 </style>
@@ -150,75 +159,101 @@ div {
 </div>
 
 <div class="row">
-  <div class="leftcolumn">
+  <div class="leftcolumn" style="width: 270px">
     <div class="card">
-      <h2>Health Sections</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-     
-		<div class="topnav">
-		<a href="#">Link</a>
-		<a href="#" style="float: bottom" >Link</a>
-		<a href="#">Link</a>
-		<p> <p>
-		</div>
-		
-      <p>Some text..</p>
-      <p>SAMPLE TEXTERINO</p>
-	  <p>SAMPLE TEXTERINO</p>
+      <h2 style="text-align: center;margin-bottom: -15px;">Health Sections</h2>
+      <h5 style="font-size: 10pt;text-align: center;margin-bottom: 10px;">Tips for your everyday life</h5>
+      <div style="height: 300px; width: 200px; overflow-y: scroll;">
+      <!-- Link 1 -->
+        <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">
+          <img alt="Blood Levels" class="leftcolumnImageLink" src="https://www.kzoo.edu/praxis/files/2020/03/Screen-Shot-2020-03-31-at-2.39.55-PM.png">
+        </a>
+        <p style="font-size: 8pt;text-align: center;margin-top: -3px;">Protect Yourself from <br>COVID-19
+        </p>
+      <!-- Link 2 -->
+        <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1570512/">
+          <img alt="Blood Levels" class="leftcolumnImageLink" src="https://cnet3.cbsistatic.com/img/01ZEIuuXPi1h_-x0bSr1IeFXObw=/1200x630/2020/03/29/74a8ea87-ad93-40a7-9544-f9de29f25424/gettyimages-916358758.jpg">
+        </a>
+        <p style="font-size: 8pt;text-align: center;margin-top: -3px;">Estimating Blood Glucose Levels for Diabetics
+        </p>
+      <!-- Link 3 -->
+        <a target="_blank" href="https://www.healthline.com/nutrition/15-ways-to-lower-blood-sugar">
+          <img alt="Joggers" class="leftcolumnImageLink" src="https://i0.wp.com/rakuten.today/wp-content/uploads/2018/10/GettyImages-508299088.jpg?fit=1500%2C1000&ssl=1">
+        </a>  
+        <p style="font-size: 8pt;text-align: center;margin-top: -3px;">15 Ways to <br>Lower Blood Sugar
+        </p>
+      <!-- Link 4 -->
+        <a target="_blank" href="https://www.healthline.com/health/blood-sugar-spike#:~:text=When%20glucose%20builds%20up%20in,unable%20to%20use%20insulin%20effectively." >
+          <img alt="Joggers" class="leftcolumnImageLink" src="https://miro.medium.com/max/4242/1*Om3m6TkNp8-ys9KLHozFsg.jpeg">
+        </a>  
+        <p style="font-size: 8pt;text-align: center;margin-top: -3px;">Recognize and Manage a Blood Sugar Spike
+        </p>
+      <!-- Link 5 -->
+        <a target="_blank" href="http://sleepeducation.org/essentials-in-sleep/healthy-sleep-habits" >
+          <img alt="Joggers" class="leftcolumnImageLink" src="https://1v1d1e1lmiki1lgcvx32p49h8fe-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/woman-man-sleeping-getty.jpg">
+        </a>  
+        <p style="font-size: 8pt;text-align: center;margin-top: -3px;">Healthy Sleep Habits
+        </p>
+      </div>
+      <!-- Date of Update -->
+      <p style="font-style: italic;font-size: 8pt;text-align: left;color:rgb(48, 48, 48)">Updated: 11/11/2020</p>
     </div>
+
   </div>
   <div class="rightcolumn">
     <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:300px;">Imageer</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <h2>About Us</h2>
+      <div class="fakeimg" style="height:300px;">Test 123</div>
+      <p>Some text about our team and what we hope to accomplish. Our goals and aspirations</p>
     </div>
   </div>
 </div>
 <!-- BELOW THIS IS THE TEXT  BOXES -->
 <div>
   
-    <input type="submit" value="Create Account">
+    <input type="submit" id = "signup_page" value="Create Account">
     <input type="submit" id = "login_page" value="Login">
   </form>
 </div>
 
-<script>
-    alert("hey");
+
+  <script>
+    <!--alert("hey");-->	
     document.getElementById("login_page").addEventListener('click', function(){
         window.document.location = "./login.html";
     })
 </script>
 
+  <script>
+    <!--alert("hey");-->	
+    document.getElementById("signup_page").addEventListener('click', function(){
+        window.document.location = "./signup.html";
+    })
+</script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+		apiKey: "AIzaSyBmCo2VqSfOuIkdk8LrHM3VroLasHK5JpY",
+		authDomain: "health-monitoring-438d4.firebaseapp.com",
+		databaseURL: "https://health-monitoring-438d4.firebaseio.com",
+		projectId: "health-monitoring-438d4",
+		storageBucket: "health-monitoring-438d4.appspot.com",
+		messagingSenderId: "665249190955",
+    };
+    firebase.initializeApp(config);
+	
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    // update firestore settings
+    db.settings({ timestampsInSnapshots: true });
+  </script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/index.js"></script>
 </body>
 </html>
-
-
-<!--
-<! Doctype html>
-<html>
-	<head>
-		<title>Health Monitoring Application</title>
-		<link rel="stylesheet" href="/static/style.css" />
-	<head>
-	<body>
-		<h1>This website was built for health monitoring purposes</h1>
-		
-		
-		<div class="row">
-			<div class="column">
-				<img src="static\Tanbar.png" width="100%;">
-			</div>
-			<div class="column">
-				<img src="static\Blackbar.png" width="20%;">
-				<img src="static\Graybar.png" width="75%;" height="145%;">
-			</div>
-			
-		
-			
-			</div>
-			
-		</div>
-	<body>
-</html>
--->	

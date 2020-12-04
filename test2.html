@@ -27,7 +27,7 @@ body {
 }
 
 .topNavButton{
-  width: 50px;
+  width: 250px;
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -90,8 +90,8 @@ div {
 </div>
 
 <div class="topnav" style="display: block">
-  <a type="button" class="topNavButton" href="file:///C:/Users/Markus/Desktop/HealthMonitoring-Firebase-Codee/Flask%20Code/templates/public/index.html" >Home</a>
-  <a type="button" class="topNavButton" style="background-color: #3c8336;" rel="test"href="C:\Users\Markus\Desktop\HealthMonitoring-Firebase-Codee\Flask Code\templates\public\test2.html">Meet the Team</a>
+  <input type="submit" class= "topNavButton" id = "home_page" value="Home">
+  <input type="submit" class= "topNavButton" id = "MTT_page" value="Meet the Team">
 </div>
 
 <div style="display:table;width: 100px;float: center;">
@@ -112,7 +112,7 @@ div {
             "Insert a clever quote that will be used in this space below here."</p></div>
       <!-- Profile 2 -->
         <div class="profileInformation" style="margin-top: 15px;">
-          <img  alt="Profile Image" style="width: 200px;height: 250px;float: left;" src="C:\Users\Markus\Desktop\HealthMonitoring-Firebase-Codee\Flask Code\templates\public\profile images\Markus M.jpg">
+          <img  alt="Profile Image" style="width: 200px;height: 250px;float: left;" src="./profile images\Markus M.jpg">
           <p style="width: 500px;font-size: 18pt; font-weight: bold;float: left;margin-left: 17px;margin-top: 5px;">
             Website Development</p>
           <div style="background-color: #45a049;width: 500px;height: 203px;float:left;margin-left: 10px;margin-top: -10px;">
@@ -181,7 +181,21 @@ div {
           <h3 style="width: 200px; text-align: center;margin-top: 12px;float: left;font-size: 14pt;float:left">
             First and Last Name</h3>
           <p style="width: 500px;font-size: 12pt; font-weight: bold;font-style: italic;float: left;margin-left: 17px;margin-top: 14px;text-align: center;">"Insert a clever quote that will be used in this space below here."</p></div>
-    </div>
+	<script>
+	<!--alert("hey");-->	
+    document.getElementById("home_page").addEventListener('click', function(){
+        window.document.location = "./index.html";
+    })
+	</script>
+
+	<script>
+    <!--alert("hey");-->	
+    document.getElementById("MTT_page").addEventListener('click', function(){
+        window.document.location = "./test2.html";
+    })
+	</script>
+   
+   </div>
   </div>
 </div>
 </body>

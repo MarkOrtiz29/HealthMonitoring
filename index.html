@@ -153,8 +153,8 @@ div {
 </div>
 
 <div class="topnav" style="display: block">
-  <a type="button" class="topNavButton" style="background-color: #3c8336;">Home</a>
-  <a type="button" class="topNavButton" href="C:\Users\Markus\Desktop\HealthMonitoring-Firebase-Codee\Flask Code\templates\public\test2.html">Meet the Team</a>
+  <input type="submit" class= "topNavButton" id = "home_page" value="Home">
+  <input type="submit" class= "topNavButton" id = "MTT_page" value="Meet the Team">
 </div>
 
 <div class="row" style="display:table;width: 100%;">
@@ -205,12 +205,12 @@ div {
   </div>
 </div>
 
-
+<div>
 <!-- BELOW THIS IS THE TEXT  BOXES -->
-  <form>
+  
     <input type="submit" id = "signup_page" value="Create Account">
     <input type="submit" id = "login_page" value="Login">
-  </form>
+  
 </div>
 
   <script>
@@ -226,6 +226,21 @@ div {
         window.document.location = "./signup.html";
     })
 </script>
+
+  <script>
+    <!--alert("hey");-->	
+    document.getElementById("home_page").addEventListener('click', function(){
+        window.document.location = "./index.html";
+    })
+</script>
+
+  <script>
+    <!--alert("hey");-->	
+    document.getElementById("MTT_page").addEventListener('click', function(){
+        window.document.location = "./test2.html";
+    })
+</script>
+
 
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script>

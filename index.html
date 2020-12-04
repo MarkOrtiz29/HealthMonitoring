@@ -27,15 +27,15 @@ body {
 }
 
 .topNavButton{
-  width: 50px;
+  width: 200px;
   background-color: #4CAF50;
   color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
+  padding: 12px 20px;
+  margin: -10px 0;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 18pt;
+  font-size: 14pt;
   font-weight: bold;
   text-decoration: none;
   width: fixed;
@@ -152,8 +152,8 @@ div {
 </div>
 
 <div class="topnav" style="display: block">
-  <a type="button" class="topNavButton" style="background-color: #3c8336;">Home</a>
-  <a type="button" class="topNavButton" href="C:\Users\Markus\Desktop\HealthMonitoring-Firebase-Codee\Flask Code\templates\public\test2.html">Meet the Team</a>
+  <button type="button" class="topNavButton" onClick="window.location.reload();">Home</button>
+  <button type="button" class="topNavButton" onclick="window.location.href='./meet_the_team.html'">Meet the Team</button>
 </div>
 
 <div class="row" style="display:table;width: 100%;">
@@ -206,13 +206,14 @@ div {
 
 
 <!-- BELOW THIS IS THE TEXT  BOXES -->
-  <form>
+<div>
+<!--    <form> -->
     <input type="submit" id = "signup_page" value="Create Account">
     <input type="submit" id = "login_page" value="Login">
-  </form>
+<!--  </form> -->
 </div>
 
-  <script>
+<script>
     <!--alert("hey");-->	
     document.getElementById("login_page").addEventListener('click', function(){
         window.document.location = "./login.html";

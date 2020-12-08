@@ -39,6 +39,7 @@ body {
   font-weight: bold;
   text-decoration: none;
   width: fixed;
+  margin-left: 10px;
 }
 
 .topNavButton:hover{
@@ -69,20 +70,20 @@ body {
 }
 /* Right column */
 .rightcolumn {
-  /*
-  height: 445px;
   margin-left: 250px;
-  */
   max-width: 1000px;
-  min-width: 600px;
+  min-width: 500px;
   background-color: #f1f1f1;
 }
 
 /* Grey box in About Us Section*/
 .rightColumnTextBox {
-  background-color: rgb(128, 128, 128);
+  background-color: rgb(153, 153, 153);
   width: 100%;
   padding: 20px;
+  height:300px;
+  font-size: 17px;
+  overflow: auto;
 }
 
 /* Footer */
@@ -104,10 +105,17 @@ body {
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 700px) {
   .topnav a {
     float: none;
     width: 100%;
+  }
+  .topNavButton{
+    margin-top: 15px;
+    margin-left: 25%;
+  }
+  .leftcolumnImgLink{
+    margin-left: 33%;
   }
 }
 
@@ -148,13 +156,15 @@ div {
 <body>
 
 <div class="header">
+  <img alt="Cross" style="float: left;width: 60px;" src="./profile images/red-cross.jpg"></img>
+  <img alt="Cross" style="float: right;width: 60px;" src="./profile images/red-cross.jpg"></img>
   <h1>Health Monitoring Application</h1>
-  <p>This application will help monitor your wellness! bbbbb</p>
+  <p>This application will help monitor your wellness!</p>
 </div>
 
 <div class="topnav" style="display: block">
-  <button type="button" class="topNavButton" onClick="window.location.reload();">Home</button>
-  <button type="button" class="topNavButton" onclick="window.location.href='./meet_the_team.html'">Meet the Team</button>
+  <button type="button" class="topNavButton" onClick="window.location.reload();" style="float: left;">Home</button>
+  <button type="button" class="topNavButton" onclick="window.location.href='./test2.html'">Meet the Team</button>
 </div>
 
 <div class="row" style="display:table;width: 100%;">
@@ -164,44 +174,44 @@ div {
       <h5 style="font-size: 10pt;text-align: center;margin-bottom: 10px;">Tips for your everyday life</h5>
       <div class="leftcolumnBox">
       <!-- Link 1 -->
-        <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">
-          <img  alt="Blood Levels" class="leftcolumnImgLink" src="https://www.kzoo.edu/praxis/files/2020/03/Screen-Shot-2020-03-31-at-2.39.55-PM.png">
+        <a target="imageLink" class="imageLink" href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">
+          <img  alt="Blood Levels" class="leftcolumnImgLink"src="https://www.kzoo.edu/praxis/files/2020/03/Screen-Shot-2020-03-31-at-2.39.55-PM.png">
         </a>
         <p style="font-size: 8pt;text-align: center;margin-top: -3px;">Protect Yourself from <br>COVID-19
         </p>
       <!-- Link 2 -->
-        <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1570512/">
+        <a target="imageLink" style="" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1570512/">
          <img alt="Blood Levels" class="leftcolumnImgLink" src="https://cnet3.cbsistatic.com/img/01ZEIuuXPi1h_-x0bSr1IeFXObw=/1200x630/2020/03/29/74a8ea87-ad93-40a7-9544-f9de29f25424/gettyimages-916358758.jpg">
         </a>
         <p style="font-size: 8pt;text-align: center;margin-top: -3px;">Estimating Blood Glucose Levels for Diabetics
         </p>
       <!-- Link 3 -->
-        <a target="_blank" href="https://www.healthline.com/nutrition/15-ways-to-lower-blood-sugar">
+        <a target="imageLink" href="https://www.healthline.com/nutrition/15-ways-to-lower-blood-sugar">
           <img alt="Joggers" class="leftcolumnImgLink" src="https://i0.wp.com/rakuten.today/wp-content/uploads/2018/10/GettyImages-508299088.jpg?fit=1500%2C1000&ssl=1">
        </a>  
        <p style="font-size: 8pt;text-align: center;margin-top: -3px;">15 Ways to <br>Lower Blood Sugar
        </p>
      <!-- Link 4 -->
-          <a target="_blank" href="https://www.healthline.com/health/blood-sugar-spike#:~:text=When%20glucose%20builds%20up%20in,unable%20to%20use%20insulin%20effectively." >
+          <a target="imageLink" href="https://www.healthline.com/health/blood-sugar-spike#:~:text=When%20glucose%20builds%20up%20in,unable%20to%20use%20insulin%20effectively." >
           <img alt="Joggers" class="leftcolumnImgLink" src="https://miro.medium.com/max/4242/1*Om3m6TkNp8-ys9KLHozFsg.jpeg">
         </a>  
        <p style="font-size: 8pt;text-align: center;margin-top: -3px;">Recognize and Manage a Blood Sugar Spike
         </p>
       <!-- Link 5 -->
-        <a target="_blank" href="http://sleepeducation.org/essentials-in-sleep/healthy-sleep-habits" >
+        <a target="imageLink" href="http://sleepeducation.org/essentials-in-sleep/healthy-sleep-habits" >
           <img alt="Joggers" class="leftcolumnImgLink" src="https://1v1d1e1lmiki1lgcvx32p49h8fe-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/woman-man-sleeping-getty.jpg">
        </a>  
         <p style="font-size: 8pt;text-align: center;margin-top: -3px;">Healthy Sleep Habits
         </p>
       </div>
       <!-- Date of Update -->
-      <p style="font-style: italic;font-size: 8pt;text-align: left;color:rgb(48, 48, 48)">Updated: 11/30/2020</p>
+      <p style="font-style: italic;font-size: 8pt;text-align: left;color:rgb(48, 48, 48)">Updated: 12/08/2020</p>
   </div>
   <!-- RIGHT -->
-  <div class="rightcolumn" style="background-color: #e0e0e0">
+  <div class="rightcolumn" style="background-color: #e0e0e0;">
     <h2 style="text-align: center">About Us</h2>
-    <div class="rightColumnTextBox" style="height:300px;">Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.</div>
-    <p>Some text about our team and what we hope to accomplish. Our goals and aspirations</p>
+    <div class="rightColumnTextBox">Our app is specifically designed for low income individuals that need them the most. While other services will provide high fees and give you more questions than answers, we provide an digestable system in which can more easily monitor your health at a price that is next to zero.<br><br> Our group is composed of an eight group team who is working effortlessly in providing the following: </br> Links to doctor approved websites updated daily, a customized profile with graphs and charts to better understand what category your health falls into, and most of all the trust you've given us in helping improve your day to day life.</div>
+      <p style="font-size: 18px;text-align: center;font-weight: bold;">"Our Oath Is to Never Sell Your Data to Any Corporate Entity."</p>
   </div>
 </div>
 
